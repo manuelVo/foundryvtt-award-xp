@@ -1,0 +1,35 @@
+{
+	"name": "award-xp",
+	"title": "Award XP",
+	"description": "Award Experience to the group, which will be devided between the players and automatically added their character sheets.",
+	"version": "0.0.1",
+	"minimumCoreVersion" : "0.7.8",
+	"compatibleCoreVersion" : "0.7.9",
+	"author": "Manuel Vögele",
+	"esmodules": [
+		"src/main.js"
+	],
+	"templates": [
+		"templates/award_experience_dialog.html",
+		"templates/awarded_experience_message.html",
+		"templates/levelup_message.html"
+	],
+	"styles": [
+		"src/style.css"
+	],
+	"systems": [
+		"pf1"
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"url": "https://github.com/manuelVo/foundryvtt-award-xp",
+	"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-award-xp/master/module.json",
+	"download": "https://github.com/manuelVo/foundryvtt-award-xp/archive/v0.0.1.zip",
+	"readme": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/README.md",
+	"bugs": "https://github.com/manuelVo/foundryvtt-award-xp/issues"
+}

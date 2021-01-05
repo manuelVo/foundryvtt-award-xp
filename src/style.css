@@ -1,0 +1,45 @@
+.award-xp-form {
+	display:flex;
+	align-items:center;
+}
+
+.award-xp-form > div {
+	margin-right:5px;
+}
+
+.award-xp-form > div:last-child {
+	margin-right:0px;
+}
+
+.award-xp-primary {
+	flex-grow:2;
+	flex-shrink:1;
+}
+
+.award-xp-secondary {
+	flex-grow:1;
+	flex-shrink:2;
+}
+
+.award-xp-form label {
+	font-weight:bold;
+}
+
+.award-xp-char-list {
+	display:table;
+}
+
+.award-xp-char-list > div {
+	display:table-row;
+}
+
+.award-xp-char-list > div > div {
+	display:table-cell;
+	vertical-align: middle;
+	padding: 2px;
+}
+
+.award-xp-char-list img {
+	height:48px;
+	border-width: 0px;
+}

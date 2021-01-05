@@ -1,0 +1,8 @@
+{
+    "award-xp": {
+		"award-xp": "Award Experience",
+		"group-xp": "Group XP",
+		"no-char-selected": "No character selected",
+		"xp-nan": "Group XP is not a number"
+	}
+}

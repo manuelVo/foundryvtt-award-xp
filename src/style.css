@@ -39,7 +39,17 @@
 	padding: 2px;
 }
 
-.award-xp-char-list img {
+.award-xp-char-img-box {
 	height:48px;
+	width:48px;
+}
+
+.award-xp-char-img-box img {
+	max-height:100%;
+	max-width:100%;
+	height:auto;
+	width:auto;
 	border-width: 0px;
+	display:block;
+	margin:auto;
 }

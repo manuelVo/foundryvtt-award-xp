@@ -1,6 +1,6 @@
 "use strict";
 
-import {getSecondaryFormula, getSecondaryName} from "./systems.js"
+import {getSecondaryFormula, getSecondaryName, preparePcData} from "./systems.js"
 
 Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
 	const awardButton = $(`<button><i class="fas fa-angle-double-up"></i>${game.i18n.localize("award-xp.award-xp")}</button>`)
@@ -71,18 +71,6 @@ async function renderAwardedMessage(charXp, pcs) {
 		message.content = await renderTemplate("modules/award-xp/templates/levelup_message.html", {characters: levelups.map(pc => pc.actor.name)})
 		ChatMessage.create(message)
 	}
-}
-
-function preparePcData(characters) {
-	// TODO Make this adjustable via configuration
-	return characters.map(actor => {
-		return {
-			actor: actor,
-			xp: actor.data.data.details.xp.value,
-			xpAttribute: "data.details.xp.value",
-			nextLevelXp: actor.data.data.details.xp.max,
-		}
-	})
 }
 
 function onSecondaryChange(event) {

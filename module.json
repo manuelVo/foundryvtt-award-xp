@@ -18,6 +18,7 @@
 		"src/style.css"
 	],
 	"systems": [
+		"dnd5e",
 		"pf1"
 	],
 	"languages": [

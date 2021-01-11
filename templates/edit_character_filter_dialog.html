@@ -1,0 +1,13 @@
+<form>
+	<label><input type="radio" name="isBlacklist" value="true"/> {{localize "award-xp.blacklist"}}</label>
+	<label><input type="radio" name="isBlacklist" value="false"/> {{localize "award-xp.whitelist"}}</label>
+	<p class="notes" id="award-xp-explanation-blacklist">{{localize "award-xp.blacklist"}}: {{localize "award-xp.blacklist-explanation"}}</p>
+	<p class="notes" id="award-xp-explanaiton-whitelist">{{localize "award-xp.whitelist"}}: {{localize "award-xp.whitelist-explanation"}}</p>
+	<table class="award-xp-char-filter-list">
+		<tr><th colspan="2">{{localize "award-xp.characters"}}</th><th></th></tr>
+		{{#each characters}}
+			{{> awardXpRowTemplate}}
+		{{/each}}
+	</table>
+	<button type="button" id="award-xp-filter-add-character">+</button>
+</form>

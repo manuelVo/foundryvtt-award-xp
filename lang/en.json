@@ -1,8 +1,22 @@
 {
     "award-xp": {
 		"award-xp": "Award Experience",
+		"blacklist": "Blacklist",
+		"blacklist-explanation": "Characters on the list will never be awarded xp",
+		"char-picker": "Select a character",
+		"characters": "Characters",
 		"group-xp": "Group XP",
 		"no-char-selected": "No character selected",
-		"xp-nan": "Group XP is not a number"
+		"whitelist": "Whitelist",
+		"whitelist-explanation": "Only characters on the list can be awarded xp",
+		"xp-nan": "Group XP is not a number",
+
+		"settings": {
+			"filter-character": {
+				"name": "Filter Characters",
+				"hint": "Specify which characters should appear in the award xp dialog",
+				"button": "Filter Characters"
+			}
+		}
 	}
 }

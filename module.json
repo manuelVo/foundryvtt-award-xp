@@ -12,6 +12,9 @@
 	"templates": [
 		"templates/award_experience_dialog.html",
 		"templates/awarded_experience_message.html",
+		"templates/character_picker_dialog.html",
+		"templates/edit_character_filter_dialog.html",
+		"templates/edit_character_filter_dialog_table_row.html",
 		"templates/levelup_message.html"
 	],
 	"styles": [

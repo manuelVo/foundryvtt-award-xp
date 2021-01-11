@@ -1,6 +1,13 @@
 "use strict";
 
+import {registerSettings} from "./settings.js"
 import {getSecondaryFormula, getSecondaryName, preparePcData} from "./systems.js"
+import {getPcs} from "./util.js";
+
+
+Hooks.once("init", () => {
+	registerSettings()
+})
 
 Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
 	const awardButton = $(`<button><i class="fas fa-angle-double-up"></i>${game.i18n.localize("award-xp.award-xp")}</button>`)
@@ -10,6 +17,15 @@ Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
 	})
 })
 
+function filterCharacters(pc) {
+	const characterFilter = game.settings.get("award-xp", "character-filter")
+	const isInFilter = characterFilter.includes(pc.id)
+	if (game.settings.get("award-xp", "character-filter-is-blacklist"))
+		return !isInFilter
+	else
+		return isInFilter
+}
+
 async function showAwardDialog() {
 	if (!game.user.isGM)
 		return
@@ -18,7 +34,7 @@ async function showAwardDialog() {
 	if (secondaryFormula)
 		secondaryName = getSecondaryName() ?? "[secondary name missing]"
 
-	const characters = game.actors.filter(actor => actor.data.type === "character").map(actor =>{return {id: actor.id, name: actor.data.name, image: actor.data.img}})
+	const characters = getPcs().filter(filterCharacters)
 	const data = {secondaryName, characters}
 	const content = await renderTemplate("modules/award-xp/templates/award_experience_dialog.html", data)
 	Dialog.prompt({

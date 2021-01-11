@@ -1,3 +1,7 @@
+## In development
+### New features
+- Add configuration option determining which characters should be shown in the award experience dialog
+
 ## 1.0.1
 
 ### Bugfix

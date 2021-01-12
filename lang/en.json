@@ -1,11 +1,17 @@
 {
     "award-xp": {
 		"award-xp": "Award Experience",
+		"awarded-to": "{xp} XP awarded to:",
+		"awarded-xp": "Awarded Experience",
 		"blacklist": "Blacklist",
 		"blacklist-explanation": "Characters on the list will never be awarded xp",
 		"char-picker": "Select a character",
 		"characters": "Characters",
 		"group-xp": "Group XP",
+		"levelup": {
+			"title": "Levelup",
+			"desc": "The following characters reached the next level"
+		},
 		"no-char-selected": "No character selected",
 		"whitelist": "Whitelist",
 		"whitelist-explanation": "Only characters on the list can be awarded xp",

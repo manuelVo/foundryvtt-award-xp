@@ -22,6 +22,10 @@
 				"name": "Filter Characters",
 				"hint": "Specify which characters should appear in the award xp dialog",
 				"button": "Filter Characters"
+			},
+			"solo-xp": {
+				"name": "Solo XP",
+				"hint": "Shows additional inputs for awarding solo xp to characters."
 			}
 		}
 	}

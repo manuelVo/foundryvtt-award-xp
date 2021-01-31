@@ -3,6 +3,6 @@
 
 <p>
 	{{#each characters}}
-		{{this}}<br>
+		{{this.name}}{{#if this.bonusXp}} {{localize "award-xp.bonus-xp-message" xp=this.bonusXp}}{{/if}}<br>
 	{{/each}}
 </p>

@@ -35,7 +35,7 @@ async function showAwardDialog() {
 		secondaryName = getSecondaryName() ?? "[secondary name missing]"
 
 	const characters = getPcs().filter(filterCharacters)
-	const data = {secondaryName, characters}
+	const data = {secondaryName, characters, showSoloXp: game.settings.get("award-xp", "character-solo-xp-input")}
 	const content = await renderTemplate("modules/award-xp/templates/award_experience_dialog.html", data)
 	Dialog.prompt({
 		content: content,
@@ -66,26 +66,26 @@ function awardXP(html) {
 	}
 
 	const charXp = Math.floor(groupXp / pcs.length)
-	var soloXpMessages = {};
+	let soloXpInputs = Array.from(html.querySelectorAll(".award-xp-solo"))
+	let soloXpPerCharacter = {}
 	pcs.forEach(pc => {
-		var soloXp = 0;
-		soloXpMessages[pc.actor.id] = '';
+		soloXpPerCharacter[pc.actor.id] = 0;
 		if (game.settings.get("award-xp", "character-solo-xp-input")) {
-			var soloXp = Array.from(html.querySelectorAll(".award-xp-solo")).filter(input => input.name == "xp" + pc.actor.id).map(input => parseInt(input.value)).map(value => isNaN(value) ? 0 : value)[0];
-			soloXpMessages[pc.actor.id] = ' (+' + soloXp + ' bonus xp)';
+			soloXpPerCharacter[pc.actor.id] = soloXpInputs.filter(input => input.name == "xp" + pc.actor.id).map(input => parseInt(input.value)).map(value => isNaN(value) ? 0 : value)[0];
 		}
-		pc.newXp = pc.xp + charXp + soloXp
+		pc.newXp = pc.xp + charXp + soloXpPerCharacter[pc.actor.id]
 		const updateData = {}
 		updateData[pc.xpAttribute] = pc.newXp
 		pc.actor.update(updateData)
 	})
 
-	renderAwardedMessage(charXp, pcs, soloXpMessages)
+	renderAwardedMessage(charXp, pcs, soloXpPerCharacter)
 }
 
-async function renderAwardedMessage(charXp, pcs, soloXpMessages) {
+async function renderAwardedMessage(charXp, pcs, soloXpPerCharacter) {
 	let message = {}
-	message.content = await renderTemplate("modules/award-xp/templates/awarded_experience_message.html", {xp: charXp, characters: pcs.map(pc => pc.actor.name + soloXpMessages[pc.actor.id])})
+	message.content = await renderTemplate("modules/award-xp/templates/awarded_experience_message.html", {xp: charXp, characters: pcs.map(pc => {return {name: pc.actor.name, bonusXp: soloXpPerCharacter[pc.actor.id] > 0 ? soloXpPerCharacter[pc.actor.id] : undefined}})}) 
+	console.warn(message.content)
 	ChatMessage.create(message)
 
 	const levelups = pcs.filter(pc => pc.newXp >= pc.nextLevelXp)

@@ -16,6 +16,8 @@
 		"whitelist": "Whitelist",
 		"whitelist-explanation": "Only characters on the list can be awarded xp",
 		"xp-nan": "Group XP is not a number",
+		"bonus-xp-placeholder": "bonus solo XP",
+		"bonus-xp-message": "(+{xp} bonus XP)",
 
 		"settings": {
 			"filter-character": {

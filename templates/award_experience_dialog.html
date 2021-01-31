@@ -5,7 +5,13 @@
 	{{/if}}
 </div>
 <div class="award-xp-char-list">
-	{{#each characters}}
-		<div><div><input class="award-xp-char-selector" type="checkbox" name="{{this.id}}" checked/></div><div class="award-xp-char-img-box"><img src="{{this.image}}"/></div><div>{{this.name}}</div> {{#if this.showSoloXp}}<input class="award-xp-solo" type="text" name="xp{{this.id}}"/>{{/if}} </div>
-	{{/each}}
+	{{#if showSoloXp}}
+		{{#each characters}}
+			<div><div><input class="award-xp-char-selector" type="checkbox" name="{{this.id}}" checked/></div><div class="award-xp-char-img-box"><img src="{{this.image}}"/></div><div>{{this.name}}</div><div><input class="award-xp-solo" type="text" name="xp{{this.id}}" placeholder="{{localize "award-xp.bonus-xp-placeholder"}}"/></div></div>
+		{{/each}}
+	{{else}}
+		{{#each characters}}
+			<div><div><input class="award-xp-char-selector" type="checkbox" name="{{this.id}}" checked/></div><div class="award-xp-char-img-box"><img src="{{this.image}}"/></div><div>{{this.name}}</div></div>
+		{{/each}}
+	{{/if}}
 </div>

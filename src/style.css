@@ -61,8 +61,3 @@
 .award-xp-char-picker .award-xp-char:hover {
 	background-color: rgba(0, 0, 0, 0.05);
 }
-
-.award-xp-solo {
-	top: 50%;
-	transform: translateY(50%);
-}

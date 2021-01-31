@@ -1,14 +1,6 @@
 import {getPcs} from "./util.js"
 
 export function registerSettings() {
-	game.settings.register("award-xp", "character-solo-xp-input", {
-		name: "award-xp.settings.solo-xp.name",
-		hint: "award-xp.settings.solo-xp.hint",
-		scope: "world",
-		config: true,
-		type: Boolean,
-		default: true,
-	})
 	game.settings.registerMenu("award-xp", "character-filter-menu", {
 		name: "award-xp.settings.filter-character.name",
 		hint: "award-xp.settings.filter-character.hint",
@@ -16,6 +8,14 @@ export function registerSettings() {
 		icon: "fas fa-filter",
 		type: CharacterFilterApplication,
 		restricted: true,
+	})
+	game.settings.register("award-xp", "character-solo-xp-input", {
+		name: "award-xp.settings.solo-xp.name",
+		hint: "award-xp.settings.solo-xp.hint",
+		scope: "world",
+		config: true,
+		type: Boolean,
+		default: true,
 	})
 	game.settings.register("award-xp", "character-filter", {
 		scope: "world",

@@ -69,9 +69,9 @@ function awardXP(html) {
 	let soloXpInputs = Array.from(html.querySelectorAll(".award-xp-solo"))
 	let soloXpPerCharacter = {}
 	pcs.forEach(pc => {
-		soloXpPerCharacter[pc.actor.id] = 0;
+		soloXpPerCharacter[pc.actor.id] = 0
 		if (game.settings.get("award-xp", "character-solo-xp-input")) {
-			soloXpPerCharacter[pc.actor.id] = soloXpInputs.filter(input => input.name == "xp" + pc.actor.id).map(input => parseInt(input.value)).map(value => isNaN(value) ? 0 : value)[0];
+			soloXpPerCharacter[pc.actor.id] = parseInt(soloXpInputs.find(input => input.name === `xp${pc.actor.id}`)?.value) || 0
 		}
 		pc.newXp = pc.xp + charXp + soloXpPerCharacter[pc.actor.id]
 		const updateData = {}
@@ -85,7 +85,6 @@ function awardXP(html) {
 async function renderAwardedMessage(charXp, pcs, soloXpPerCharacter) {
 	let message = {}
 	message.content = await renderTemplate("modules/award-xp/templates/awarded_experience_message.html", {xp: charXp, characters: pcs.map(pc => {return {name: pc.actor.name, bonusXp: soloXpPerCharacter[pc.actor.id] > 0 ? soloXpPerCharacter[pc.actor.id] : undefined}})}) 
-	console.warn(message.content)
 	ChatMessage.create(message)
 
 	const levelups = pcs.filter(pc => pc.newXp >= pc.nextLevelXp)

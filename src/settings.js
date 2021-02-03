@@ -15,7 +15,7 @@ export function registerSettings() {
 		scope: "world",
 		config: true,
 		type: Boolean,
-		default: true,
+		default: false,
 	})
 	game.settings.register("award-xp", "character-filter", {
 		scope: "world",

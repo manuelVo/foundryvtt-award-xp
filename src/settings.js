@@ -9,6 +9,14 @@ export function registerSettings() {
 		type: CharacterFilterApplication,
 		restricted: true,
 	})
+	game.settings.register("award-xp", "character-solo-xp-input", {
+		name: "award-xp.settings.solo-xp.name",
+		hint: "award-xp.settings.solo-xp.hint",
+		scope: "world",
+		config: true,
+		type: Boolean,
+		default: false,
+	})
 	game.settings.register("award-xp", "character-filter", {
 		scope: "world",
 		config: false,

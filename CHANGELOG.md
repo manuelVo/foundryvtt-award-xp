@@ -1,4 +1,4 @@
-## In development
+## 1.2.1
 ### Bugfix
 - The Award Experience button will now only be shown to GMs, not to players
 

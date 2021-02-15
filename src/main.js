@@ -10,6 +10,9 @@ Hooks.once("init", () => {
 })
 
 Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
+	// Only show the award xp button to the gm
+	if (!game.user.isGM)
+		return
 	const awardButton = $(`<button><i class="fas fa-angle-double-up"></i>${game.i18n.localize("award-xp.award-xp")}</button>`)
 	html.find(".directory-footer").append(awardButton)
 	awardButton.click((event) => {
@@ -84,7 +87,7 @@ function awardXP(html) {
 
 async function renderAwardedMessage(charXp, pcs, soloXpPerCharacter) {
 	let message = {}
-	message.content = await renderTemplate("modules/award-xp/templates/awarded_experience_message.html", {xp: charXp, characters: pcs.map(pc => {return {name: pc.actor.name, bonusXp: soloXpPerCharacter[pc.actor.id] > 0 ? soloXpPerCharacter[pc.actor.id] : undefined}})}) 
+	message.content = await renderTemplate("modules/award-xp/templates/awarded_experience_message.html", {xp: charXp, characters: pcs.map(pc => {return {name: pc.actor.name, bonusXp: soloXpPerCharacter[pc.actor.id] > 0 ? soloXpPerCharacter[pc.actor.id] : undefined}})})
 	ChatMessage.create(message)
 
 	const levelups = pcs.filter(pc => pc.newXp >= pc.nextLevelXp)

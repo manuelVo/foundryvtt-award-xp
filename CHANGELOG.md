@@ -1,3 +1,7 @@
+## In development
+### Bugfix
+- The Award Experience button will now only be shown to GMs, not to players
+
 ## 1.2.0
 ### New features
 - Each character can now be awarded additional solo experience (enable this feature in the settings to use it) (thanks to Kamil Szczepański)

@@ -5,6 +5,7 @@ export function getSecondaryName() {
 export function preparePcData(characters) {
 	// TODO Make this adjustable via configuration
 	switch (game.system.id) {
+        case "sfrpg":
 		case "dnd5e":
 		case "pf1":
 			return characters.map(actor => {

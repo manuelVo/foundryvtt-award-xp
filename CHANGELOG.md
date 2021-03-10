@@ -1,3 +1,7 @@
+## In development
+### Game Systems
+- Now supports the Starfinder game system (thanks to rrenna)
+
 ## 1.2.1
 ### Bugfix
 - The Award Experience button will now only be shown to GMs, not to players

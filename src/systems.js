@@ -61,6 +61,7 @@ export function getSecondaryFormula() {
 				[30, 155000],
 			]
 		case "pf1":
+		case "sfrpg":
 			return [
 				["1/8", 50],
 				[1/8, 50],

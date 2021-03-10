@@ -1,4 +1,4 @@
-## In development
+## 1.2.2
 ### Game Systems
 - Now supports the Starfinder game system (thanks to rrenna)
 

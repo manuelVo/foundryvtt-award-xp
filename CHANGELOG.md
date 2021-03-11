@@ -1,4 +1,4 @@
-## In development
+## 1.2.3
 ### Game Systems
 - Now supports the SW5e game system (thanks to burndaflame)
 

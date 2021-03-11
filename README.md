@@ -4,4 +4,4 @@ Easily award experience points to your players. This module allows you to give o
 
 The button to award experience to the players can be found at the bottom of the actors panel.
 
-Currently supported game systems: DnD 5e, Pathfinder 1
+Currently supported game systems: DnD 5e, Pathfinder 1, Starfinder, SW5e

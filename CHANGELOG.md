@@ -1,3 +1,7 @@
+## In development
+### Game Systems
+- Now supports the SW5e game system (thanks to burndaflame)
+
 ## 1.2.2
 ### Game Systems
 - Now supports the Starfinder game system (thanks to rrenna)

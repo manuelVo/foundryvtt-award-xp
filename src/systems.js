@@ -8,6 +8,7 @@ export function preparePcData(characters) {
 		case "dnd5e":
 		case "pf1":
 		case "sfrpg":
+		case "sw5e":
 			return characters.map(actor => {
 				return {
 					actor: actor,
@@ -22,6 +23,7 @@ export function preparePcData(characters) {
 export function getSecondaryFormula() {
 	switch (game.system.id) {
 		case "dnd5e":
+		case "sw5e":
 			return [
 				["1/8", 25],
 				[1/8, 25],

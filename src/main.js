@@ -45,6 +45,7 @@ async function showAwardDialog() {
 		label: game.i18n.localize("award-xp.award-xp"),
 		render: onAwardDialogRendered,
 		callback: awardXP,
+		rejectClose: false,
 		options: {
 			width: game.settings.get("award-xp", "character-solo-xp-input") ? 300 : 250,
 			jQuery: true,

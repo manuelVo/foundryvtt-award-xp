@@ -1,3 +1,7 @@
+## In development
+### Compatiblity
+- **BREAKING** Award XP now supports Foundry version 0.8.2. To accomplish this, support for all older versions has been dropped.
+
 ## 1.2.3
 ### Game Systems
 - Now supports the SW5e game system (thanks to burndaflame)
@@ -22,6 +26,5 @@
 - Chat messages are now properly localized
 
 ## 1.0.1
-
 ### Bugfix
 - Character images won't be stretched anymore if the character name is very long

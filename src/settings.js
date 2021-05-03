@@ -20,7 +20,7 @@ export function registerSettings() {
 	game.settings.register("award-xp", "character-filter", {
 		scope: "world",
 		config: false,
-		//type: Array, // The type commented out because type: Array triggers a bug which can be avoided by not mentioning the type (Bug https://gitlab.com/foundrynet/foundryvtt/-/issues/4475 )
+		type: Array,
 		default: [],
 	})
 	game.settings.register("award-xp", "character-filter-is-blacklist", {

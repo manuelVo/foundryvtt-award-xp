@@ -3,8 +3,8 @@
 	"title": "Award XP",
 	"description": "Award Experience to the group, which will be devided between the players and automatically added their character sheets.",
 	"version": "1.2.3",
-	"minimumCoreVersion" : "0.7.8",
-	"compatibleCoreVersion" : "0.7.9",
+	"minimumCoreVersion" : "0.8.2",
+	"compatibleCoreVersion" : "0.8.2",
 	"authors": [
 		{
 			"name": "Manuel Vögele",

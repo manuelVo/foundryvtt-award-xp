@@ -1,4 +1,4 @@
-## In development
+## 1.3.0
 ### Compatiblity
 - **BREAKING** Award XP now supports Foundry version 0.8.2. To accomplish this, support for all older versions has been dropped.
 

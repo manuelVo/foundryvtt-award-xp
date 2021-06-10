@@ -44,5 +44,6 @@
 	"download": "https://github.com/manuelVo/foundryvtt-award-xp/archive/v1.3.0.zip",
 	"readme": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/README.md",
 	"changelog": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/CHANGELOG.md",
-	"bugs": "https://github.com/manuelVo/foundryvtt-award-xp/issues"
+	"bugs": "https://github.com/manuelVo/foundryvtt-award-xp/issues",
+	"allowBugReporter": true
 }

@@ -1,0 +1,34 @@
+{
+    "award-xp": {
+		"award-xp": "Recompensa em XP",
+		"awarded-to": "{xp} XP concedido à:",
+		"awarded-xp": "Experiência Recebida",
+		"blacklist": "Lista negra",
+		"blacklist-explanation": "Personagens nesta lista nunca receberão XP",
+		"char-picker": "Selecione um personagem",
+		"characters": "Personagens",
+		"group-xp": "XP de grupo",
+		"levelup": {
+			"title": "Subiu de nível",
+			"desc": "Os seguintes personagens alcançaram o próximo nível"
+		},
+		"no-char-selected": "Nenhum personagem selecionado",
+		"whitelist": "Whitelist",
+		"whitelist-explanation": "Apenas personagens desta lista podem receber XP",
+		"xp-nan": "XP Grupo não é um número",
+		"bonus-xp-placeholder": "bônus de XP solo",
+		"bonus-xp-message": "(+{xp} XP bônus)",
+
+		"settings": {
+			"filter-character": {
+				"name": "Filtrar Personagens",
+				"hint": "Especifique quais personagens devem aparecer na caixa de diálogo de XP",
+				"button": "Filtrar Personagens"
+			},
+			"solo-xp": {
+				"name": "XP Solo",
+				"hint": "Mostra campos adicionais para conceder XP solo aos personagens."
+			}
+		}
+	}
+}

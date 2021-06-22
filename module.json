@@ -37,6 +37,16 @@
 			"lang": "en",
 			"name": "English",
 			"path": "lang/en.json"
+		},
+		{
+			"lang": "ko",
+			"name": "한국어",
+			"path": "lang/ko.json"
+		},
+		{
+			"lang": "pt-BR",
+			"name": "Português do Brasil",
+			"path": "lang/pt-BR.json"
 		}
 	],
 	"url": "https://github.com/manuelVo/foundryvtt-award-xp",

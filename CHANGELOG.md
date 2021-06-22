@@ -1,3 +1,12 @@
+## 1.3.1
+### Compatibility
+- Award XP is now compatible with 0.8.7
+
+### Translation
+- Added brazilian portugese translation (thanks to salsa2k)
+- Added korean translation (thanks to drdwing)
+
+
 ## 1.3.0
 ### Compatiblity
 - **BREAKING** Award XP now supports Foundry version 0.8.2. To accomplish this, support for all older versions has been dropped.

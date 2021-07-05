@@ -27,6 +27,7 @@
 		"src/style.css"
 	],
 	"systems": [
+		"swade",
 		"dnd5e",
 		"pf1",
 		"sfrpg",
@@ -49,11 +50,11 @@
 			"path": "lang/pt-BR.json"
 		}
 	],
-	"url": "https://github.com/manuelVo/foundryvtt-award-xp",
-	"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-award-xp/master/module.json",
-	"download": "https://github.com/manuelVo/foundryvtt-award-xp/archive/v1.3.1.zip",
-	"readme": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/README.md",
-	"changelog": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/CHANGELOG.md",
-	"bugs": "https://github.com/manuelVo/foundryvtt-award-xp/issues",
+	"url": "https://github.com/passivedragon/foundryvtt-award-xp",
+	"manifest": "https://raw.githubusercontent.com/passivedragon/foundryvtt-award-xp/master/module.json",
+	"download": "https://github.com/passivedragon/foundryvtt-award-xp/archive/v1.3.1.zip",
+	"readme": "https://github.com/passivedragon/foundryvtt-award-xp/blob/master/README.md",
+	"changelog": "https://github.com/passivedragon/foundryvtt-award-xp/blob/master/CHANGELOG.md",
+	"bugs": "https://github.com/passivedragon/foundryvtt-award-xp/issues",
 	"allowBugReporter": true
 }

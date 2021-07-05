@@ -5,6 +5,7 @@ export function getSecondaryName() {
 export function preparePcData(characters) {
 	// TODO Make this adjustable via configuration
 	switch (game.system.id) {
+		case "swade":
 		case "dnd5e":
 		case "pf1":
 		case "sfrpg":
@@ -22,6 +23,7 @@ export function preparePcData(characters) {
 
 export function getSecondaryFormula() {
 	switch (game.system.id) {
+		case "swade":
 		case "dnd5e":
 		case "sw5e":
 			return [

@@ -1,3 +1,8 @@
+## 1.3.2
+### Compatibility
+- Award XP is now compatible with 0.8.8
+
+
 ## 1.3.1
 ### Compatibility
 - Award XP is now compatible with 0.8.7

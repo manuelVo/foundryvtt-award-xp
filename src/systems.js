@@ -7,6 +7,7 @@ export function preparePcData(characters) {
 	switch (game.system.id) {
 		case "dnd5e":
 		case "pf1":
+		case "pf2e":
 		case "sfrpg":
 		case "sw5e":
 			return characters.map(actor => {
@@ -22,6 +23,10 @@ export function preparePcData(characters) {
 
 export function getSecondaryFormula() {
 	switch (game.system.id) {
+		default:
+		case "pf2e":
+			return undefined;
+
 		case "dnd5e":
 		case "sw5e":
 			return [

@@ -7,6 +7,7 @@ import {getPcs} from "./util.js";
 
 Hooks.once("init", () => {
 	registerSettings()
+	registerKeybindings();
 })
 
 Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
@@ -19,6 +20,15 @@ Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
 		showAwardDialog()
 	})
 })
+
+function registerKeybindings() {
+	game.keybindings.register(settingsKey, "showAwardDialog", {
+		name: "award-xp.award-xp",
+		onDown: showAwardDialog,
+		restricted: true,
+		precedence: -1,
+	});
+}
 
 function filterCharacters(pc) {
 	const characterFilter = game.settings.get(settingsKey, "character-filter")

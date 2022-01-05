@@ -3,7 +3,7 @@
 	"title": "Award XP",
 	"description": "Award Experience to the group, which will be devided between the players and automatically added their character sheets.",
 	"version": "1.3.2",
-	"minimumCoreVersion" : "0.8.2",
+	"minimumCoreVersion" : "9.238",
 	"compatibleCoreVersion" : "9",
 	"authors": [
 		{

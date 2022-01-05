@@ -1,7 +1,9 @@
 import {getPcs} from "./util.js"
 
+export const settingsKey = "award-xp";
+
 export function registerSettings() {
-	game.settings.registerMenu("award-xp", "character-filter-menu", {
+	game.settings.registerMenu(settingsKey, "character-filter-menu", {
 		name: "award-xp.settings.filter-character.name",
 		hint: "award-xp.settings.filter-character.hint",
 		label: "award-xp.settings.filter-character.button",
@@ -9,7 +11,7 @@ export function registerSettings() {
 		type: CharacterFilterApplication,
 		restricted: true,
 	})
-	game.settings.register("award-xp", "character-solo-xp-input", {
+	game.settings.register(settingsKey, "character-solo-xp-input", {
 		name: "award-xp.settings.solo-xp.name",
 		hint: "award-xp.settings.solo-xp.hint",
 		scope: "world",
@@ -17,13 +19,13 @@ export function registerSettings() {
 		type: Boolean,
 		default: false,
 	})
-	game.settings.register("award-xp", "character-filter", {
+	game.settings.register(settingsKey, "character-filter", {
 		scope: "world",
 		config: false,
 		type: Array,
 		default: [],
 	})
-	game.settings.register("award-xp", "character-filter-is-blacklist", {
+	game.settings.register(settingsKey, "character-filter-is-blacklist", {
 		scope: "world",
 		config: false,
 		type: Boolean,
@@ -54,35 +56,35 @@ class CharacterFilterApplication extends FormApplication {
 	}
 
 	onListTypeChanged(event) {
-		game.settings.set("award-xp", "character-filter-is-blacklist", this.value == "true")
+		game.settings.set(settingsKey, "character-filter-is-blacklist", this.value == "true")
 	}
 
 	getData(options={}) {
 		const data = {}
-		const characterFilter = game.settings.get("award-xp", "character-filter")
+		const characterFilter = game.settings.get(settingsKey, "character-filter")
 		data.characters = getPcs().filter(pc => characterFilter.includes(pc.id))
 		return data
 	}
 
 	async _renderInner(...args) {
 		const html = await super._renderInner(...args);
-		const isBlacklist = game.settings.get("award-xp", "character-filter-is-blacklist")
+		const isBlacklist = game.settings.get(settingsKey, "character-filter-is-blacklist")
 		html.find(`input[name=isBlacklist][value=${isBlacklist}]`).prop("checked", true)
 		return html;
 	  }
 
 	async addCharacter(id) {
-		const characterFilter = game.settings.get("award-xp", "character-filter")
+		const characterFilter = game.settings.get(settingsKey, "character-filter")
 		characterFilter.push(id)
-		await game.settings.set("award-xp", "character-filter", characterFilter)
+		await game.settings.set(settingsKey, "character-filter", characterFilter)
 		this.rerender()
 	}
 
 	async onCharacterRemoveClicked(event) {
 		const id = event.currentTarget.dataset.id
-		const characterFilter = game.settings.get("award-xp", "character-filter")
+		const characterFilter = game.settings.get(settingsKey, "character-filter")
 		characterFilter.splice(characterFilter.indexOf(id), 1)
-		await game.settings.set("award-xp", "character-filter", characterFilter)
+		await game.settings.set(settingsKey, "character-filter", characterFilter)
 		this.rerender()
 	}
 
@@ -115,7 +117,7 @@ class CharacterPickerApplication extends Application {
 	}
 
 	getData(options={}) {
-		const characterFilter = game.settings.get("award-xp", "character-filter")
+		const characterFilter = game.settings.get(settingsKey, "character-filter")
 		return {characters: getPcs().filter(pc => !characterFilter.includes(pc.id))}
 	}
 

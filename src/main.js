@@ -1,6 +1,6 @@
 "use strict";
 
-import {registerSettings} from "./settings.js"
+import {registerSettings, settingsKey} from "./settings.js"
 import {getSecondaryFormula, getSecondaryName, preparePcData} from "./systems.js"
 import {getPcs} from "./util.js";
 
@@ -21,9 +21,9 @@ Hooks.on("renderActorDirectory", async (actor_directory, html, data) => {
 })
 
 function filterCharacters(pc) {
-	const characterFilter = game.settings.get("award-xp", "character-filter")
+	const characterFilter = game.settings.get(settingsKey, "character-filter")
 	const isInFilter = characterFilter.includes(pc.id)
-	if (game.settings.get("award-xp", "character-filter-is-blacklist"))
+	if (game.settings.get(settingsKey, "character-filter-is-blacklist"))
 		return !isInFilter
 	else
 		return isInFilter
@@ -38,7 +38,7 @@ async function showAwardDialog() {
 		secondaryName = getSecondaryName() ?? "[secondary name missing]"
 
 	const characters = getPcs().filter(filterCharacters)
-	const data = {secondaryName, characters, showSoloXp: game.settings.get("award-xp", "character-solo-xp-input")}
+	const data = {secondaryName, characters, showSoloXp: game.settings.get(settingsKey, "character-solo-xp-input")}
 	const content = await renderTemplate("modules/award-xp/templates/award_experience_dialog.html", data)
 	Dialog.prompt({
 		content: content,
@@ -47,7 +47,7 @@ async function showAwardDialog() {
 		callback: awardXP,
 		rejectClose: false,
 		options: {
-			width: game.settings.get("award-xp", "character-solo-xp-input") ? 300 : 250,
+			width: game.settings.get(settingsKey, "character-solo-xp-input") ? 300 : 250,
 			jQuery: true,
 		},
 	})
@@ -74,7 +74,7 @@ function awardXP(html) {
 	let soloXpPerCharacter = {}
 	pcs.forEach(pc => {
 		soloXpPerCharacter[pc.actor.id] = 0
-		if (game.settings.get("award-xp", "character-solo-xp-input")) {
+		if (game.settings.get(settingsKey, "character-solo-xp-input")) {
 			soloXpPerCharacter[pc.actor.id] = parseInt(soloXpInputs.find(input => input.name === `xp${pc.actor.id}`)?.value) || 0
 		}
 		pc.newXp = pc.xp + charXp + soloXpPerCharacter[pc.actor.id]

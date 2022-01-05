@@ -1,3 +1,14 @@
+## 1.4.0
+### New features
+- The Award Experience dialog can now be opened via a configurable keyboard shortcut
+
+### Compatibility
+- Award XP is now compatible with Foundry 9
+
+### Game Systems
+- Now supports the Pahtfinder 2e game system
+
+
 ## 1.3.2
 ### Compatibility
 - Award XP is now compatible with 0.8.8

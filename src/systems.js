@@ -15,9 +15,28 @@ export function preparePcData(characters) {
 					actor: actor,
 					xp: actor.data.data.details.xp.value,
 					xpAttribute: "data.details.xp.value",
-					nextLevelXp: actor.data.data.details.xp.max,
+					nextLevelXp: actor.data.data.details.xp.max
 				}
-			})
+			}); 
+		case "age-of-sigmar-soulbound":
+			return characters.map(actor => {
+				return {
+					actor: actor,
+					xp: actor.experience.total,
+					xpAttribute: "data.experience.total",
+					nextLevelXp: undefined
+				}
+			});
+		case "splittermond":
+			return characters.map(actor => {
+				let freeXp = actor.data.data.experience.free;
+				return {
+					actor: actor,
+					xp: typeof freeXp === 'string' ? parseInt(freeXp) : freeXp,
+					xpAttribute: "data.experience.free",
+					nextLevelXp: actor.data.data.experience.nextLevelValue
+				}
+			});
 	}
 }
 
@@ -25,6 +44,8 @@ export function getSecondaryFormula() {
 	switch (game.system.id) {
 		default:
 		case "pf2e":
+		case "age-of-sigmar-soulbound":
+		case "splittermond":
 			return undefined;
 
 		case "dnd5e":

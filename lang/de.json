@@ -2,9 +2,9 @@
     "award-xp": {
 		"award-xp": "Erfahrung vergeben",
 		"awarded-to": "{xp} EP vergeben an:",
-		"awarded-xp": "Efahrung vergeben",
+		"awarded-xp": "Erfahrung vergeben",
 		"blacklist": "Blacklist",
-		"blacklist-explanation": "Charaktere auf dieser Liste werden niemal Erfahrung erhalten.",
+		"blacklist-explanation": "Charaktere auf dieser Liste werden niemals Erfahrung erhalten.",
 		"char-picker": "Charakter Auswählen",
 		"characters": "Charaktere",
 		"group-xp": "Gruppen EP",

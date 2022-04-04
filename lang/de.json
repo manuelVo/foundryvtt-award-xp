@@ -1,0 +1,34 @@
+{
+    "award-xp": {
+		"award-xp": "Erfahrung vergeben",
+		"awarded-to": "{xp} EP vergeben an:",
+		"awarded-xp": "Erfahrung vergeben",
+		"blacklist": "Blacklist",
+		"blacklist-explanation": "Charaktere auf dieser Liste werden niemals Erfahrung erhalten.",
+		"char-picker": "Charakter Auswählen",
+		"characters": "Charaktere",
+		"group-xp": "Gruppen EP",
+		"levelup": {
+			"title": "Stufenaufstieg",
+			"desc": "Die folgenden Charaktere haben die nächste Stufe erreicht"
+		},
+		"no-char-selected": "Kein Charakter ausgewählt",
+		"whitelist": "Whitelist",
+		"whitelist-explanation": "Nur Charaktere auf dieser Liste können Erfahrung erhalten.",
+		"xp-nan": "Gruppen EP ist keine Zahl (NAN)",
+		"bonus-xp-placeholder": "bonus solo EP",
+		"bonus-xp-message": "(+{xp} bonus EP)",
+
+		"settings": {
+			"filter-character": {
+				"name": "Charaktere filtern",
+				"hint": "Gib an welche Charaktere im EP Dialog angezeigt werden.",
+				"button": "Charaktere filtern"
+			},
+			"solo-xp": {
+				"name": "Solo EP",
+				"hint": "Zeigt zusätzlich eingabefelder zur vergabe von Solo EP an Charaktere."
+			}
+		}
+	}
+}

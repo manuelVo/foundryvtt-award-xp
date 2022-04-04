@@ -27,13 +27,13 @@
 		"src/style.css"
 	],
 	"systems": [
+		"age-of-sigmar-soulbound",
 		"dnd5e",
 		"pf1",
 		"pf2e",
 		"sfrpg",
-		"sw5e",
-		"age-of-sigmar-soulbound",
-		"splittermond"
+		"splittermond",
+		"sw5e"
 	],
 	"languages": [
 		{

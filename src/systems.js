@@ -15,7 +15,7 @@ export function preparePcData(characters) {
 					actor: actor,
 					xp: actor.data.data.details.xp.value,
 					xpAttribute: "data.details.xp.value",
-					nextLevelXp: actor.data.data.details.xp.max
+					nextLevelXp: actor.data.data.details.xp.max,
 				}
 			}); 
 		case "age-of-sigmar-soulbound":

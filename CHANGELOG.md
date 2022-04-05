@@ -1,3 +1,12 @@
+## 1.4.1
+### Game Systems
+- Now supports the Splittermond game system (thanks to Vendare)
+- Now supports the Warhammer Age of Sigmar : Soulbound game system (thanks to Vendare)
+
+### Translation
+- Added german translation (thanks to Vendare)
+
+
 ## 1.4.0
 ### New features
 - The Award Experience dialog can now be opened via a configurable keyboard shortcut

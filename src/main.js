@@ -79,7 +79,8 @@ function awardXP(html) {
 		throw game.i18n.localize("award-xp.xp-nan")
 	}
 
-	const charXp = Math.floor(groupXp / pcs.length)
+	const divideXp = game.settings.get(settingsKey, "divide-xp");
+	const charXp = divideXp ? Math.floor(groupXp / pcs.length) : groupXp;
 	let soloXpInputs = Array.from(html.querySelectorAll(".award-xp-solo"))
 	let soloXpPerCharacter = {}
 	pcs.forEach(pc => {

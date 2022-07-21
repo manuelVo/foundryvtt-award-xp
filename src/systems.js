@@ -17,7 +17,7 @@ export function preparePcData(characters) {
 					xpAttribute: "data.details.xp.value",
 					nextLevelXp: actor.data.data.details.xp.max,
 				}
-			}); 
+			});
 		case "age-of-sigmar-soulbound":
 			return characters.map(actor => {
 				return {
@@ -132,5 +132,14 @@ export function getSecondaryFormula() {
 				[29, 6553600],
 				[30, 9830400],
 			]
+	}
+}
+
+export function getDivideXpDefault() {
+	switch (game.system.id) {
+		case "pf2e":
+			return false;
+		default:
+			return true;
 	}
 }

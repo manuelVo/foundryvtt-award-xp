@@ -1,3 +1,4 @@
+import {getDivideXpDefault} from "./systems.js";
 import {getPcs} from "./util.js"
 
 export const settingsKey = "award-xp";
@@ -37,18 +38,9 @@ export function registerSettings() {
 		scope: "world",
 		config: true,
 		type: Boolean,
-		default: divideXpDefault(),
+		default: getDivideXpDefault(),
 	})
 	registerSettingsAsync()
-}
-
-export function divideXpDefault() {
-	switch (game.system.id) {
-		case "pf2e":
-			return false;
-		default:
-			return true;
-	}
 }
 
 async function registerSettingsAsync() {

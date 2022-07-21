@@ -1,3 +1,7 @@
+## 1.5.0
+### New features
+- Award XP can now be configured to give the full XP amount to all characters instead of splitting the XP up. This is the new default behavior for Pathfinder 2 and Splittermond.
+
 ## 1.4.1
 ### Game Systems
 - Now supports the Splittermond game system (thanks to Vendare)

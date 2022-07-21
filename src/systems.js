@@ -137,6 +137,7 @@ export function getSecondaryFormula() {
 
 export function getDivideXpDefault() {
 	switch (game.system.id) {
+		case "splittermond":
 		case "pf2e":
 			return false;
 		default:

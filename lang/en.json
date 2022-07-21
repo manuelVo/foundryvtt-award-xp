@@ -28,6 +28,10 @@
 			"solo-xp": {
 				"name": "Solo XP",
 				"hint": "Shows additional inputs for awarding solo xp to characters."
+			},
+			"divide-xp": {
+				"name": "Divide XP",
+				"hint": "Whether or not to divide awarded XP evenly among all characters."
 			}
 		}
 	}

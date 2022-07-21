@@ -31,7 +31,24 @@ export function registerSettings() {
 		type: Boolean,
 		default: true,
 	})
+	game.settings.register(settingsKey, "divide-xp", {
+		name: "award-xp.settings.divide-xp.name",
+		hint: "award-xp.settings.divide-xp.hint",
+		scope: "world",
+		config: true,
+		type: Boolean,
+		default: divideXpDefault(),
+	})
 	registerSettingsAsync()
+}
+
+export function divideXpDefault() {
+	switch (game.system.id) {
+		case "pf2e":
+			return false;
+		default:
+			return true;
+	}
 }
 
 async function registerSettingsAsync() {

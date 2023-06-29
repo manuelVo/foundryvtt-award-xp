@@ -2,7 +2,7 @@
 	"id": "award-xp",
 	"title": "Award XP",
 	"description": "Award Experience to the group, the value of which will awarded to each player, or divided evenly between the players and automatically update their character sheets.",
-	"version": "1.5.0",
+	"version": "1.5.1",
 	"compatibility": {
 		"minimum": "9",
 		"compatibleCoreVersion": "11"
@@ -61,7 +61,7 @@
 	],
 	"url": "https://github.com/manuelVo/foundryvtt-award-xp",
 	"manifest": "https://raw.githubusercontent.com/manuelVo/foundryvtt-award-xp/master/module.json",
-	"download": "https://github.com/manuelVo/foundryvtt-award-xp/archive/v1.5.0.zip",
+	"download": "https://github.com/manuelVo/foundryvtt-award-xp/archive/v1.5.1.zip",
 	"readme": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/README.md",
 	"changelog": "https://github.com/manuelVo/foundryvtt-award-xp/blob/master/CHANGELOG.md",
 	"bugs": "https://github.com/manuelVo/foundryvtt-award-xp/issues",

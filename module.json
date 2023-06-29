@@ -1,10 +1,12 @@
 {
-	"name": "award-xp",
+	"id": "award-xp",
 	"title": "Award XP",
 	"description": "Award Experience to the group, the value of which will awarded to each player, or divided evenly between the players and automatically update their character sheets.",
 	"version": "1.5.0",
-	"minimumCoreVersion" : "9.238",
-	"compatibleCoreVersion" : "9",
+	"compatibility": {
+		"minimum": "9",
+		"compatibleCoreVersion": "11"
+	},
 	"authors": [
 		{
 			"name": "Manuel Vögele",

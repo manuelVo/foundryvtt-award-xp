@@ -5,7 +5,7 @@
 	"version": "1.5.1",
 	"compatibility": {
 		"minimum": "9",
-		"compatibleCoreVersion": "11"
+		"verified": "11"
 	},
 	"authors": [
 		{
